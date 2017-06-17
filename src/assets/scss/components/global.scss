@@ -1,0 +1,41 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	color: #665f60;
+	background-color: #ebebeb;
+}
+
+.disable-hover {
+	pointer-events: none;
+}
+
+a,
+button,
+.btn,
+input[type=submit] {
+	transition: .3s ease-in;
+	transition-property: border-color, background-color, color;
+}
+
+.btn {
+	border: 1px solid $btn-primary-border;
+	color: $btn-primary-border;
+	&:hover,
+	&:focus {
+		background-color: darken($brand-primary, 10%);
+						border-color: $brand-primary;
+						color: #fff;
+	}
+	&--primary {
+		background-color: $brand-primary;
+		border: 0;
+		//		border-color: $brand-primary;
+				color: #fff;
+		&:hover,
+		&:focus {
+			background-color: darken($brand-primary, 10%);
+			color: #fff;
+//			border: 1px solid #fff;
+		}
+	}
+}
